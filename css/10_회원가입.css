@@ -46,6 +46,34 @@ label 태그 디자인을 적용할 때 .form-body 내부에 존재하는 label 
   border: 1px solid #ccc;
 }
 
+.form-body input:hover {
+  border-color: red;
+}
+
+/*
+outline: none; input 기본으로 작성되어 있는 테두리를 제거
+
+input
+- border를 이용해서 색상이나 테두리 굵기, 모양 지정
+
+input:hover
+- input에서 기존에 작성해 놓은 속성을 따르되, 테두리 굵기나 모양은 그대로 지정해 놓고,
+  색상만 변경하고 싶을 때 border-color를 사용
+
+input:focus
+- border : 선 두께, 종류, 색상으로 지정하고,
+  outline : none; 설정을 할 수도 있지만
+- outline : 선 두께, 종류, 색상을 한 번에 지정해 주는 것이 편리함
+*/
+.form-body input:focus {
+  /*
+  고전 방식 : GPT가 알려주는 방식
+  border: 2px solid blue;
+  outline: none;
+  */
+  outline: 2px solid blue;
+}
+
 .form-body #submit {
   margin-top: 25px;
   padding: 8px 12px;
