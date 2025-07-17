@@ -1,0 +1,33 @@
+/* 
+1. body-top 클래스에 마진 패딩 0 만들기
+2. header 전체 박스에 로고 위치, 로그인 | 회원가입 한 줄에 설정
+   패딩 15 30, 배경색 #ddd, 좌 우로 나누기,
+   justify-content:space-between,
+   alian-item:center
+
+*/
+
+#body-top {
+  margin: 0px;
+  padding: 0px;
+}
+
+.header {
+  display: flex;
+  padding: 15px 30px;
+  background-color: #ddd;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  font-size: 24px;
+
+}
+
+.header-rignt a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #555;
+}
