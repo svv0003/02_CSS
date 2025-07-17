@@ -20,9 +20,13 @@
   align-items: center;
 }
 
-.header-left {
+.header-left .logo {
   font-size: 24px;
+}
 
+.header-left .logo img {
+  width: 100px;
+  border-radius: 50%;
 }
 
 .header-rignt a {
@@ -30,4 +34,11 @@
   font-size: 20px;
   font-weight: bold;
   color: #555;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
 }
