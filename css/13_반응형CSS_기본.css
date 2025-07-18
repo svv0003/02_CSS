@@ -19,7 +19,28 @@ body {
   background-color: white;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 255, 0, 0.4);
+}
+
+.container h1 {
+  color: #333;
+  text-align: center;
+  border-bottom: 3px solid #007bff;
+  padding-bottom: 10px;
+}
+
+.container h2 {
+  color: #007bff;
+  margin-top: 30px;
+  border-left: 4px solid #007bff;
+  padding-left: 15px;
+}
+
+.container h3 {
+  color: #495057;
+  border-left: 4px solid lightskyblue;
+  margin-top: 25px;
+  padding-left: 10px;
 }
 
 .code-block {
@@ -48,12 +69,27 @@ body {
   margin: 10px 0;
   border-radius: 5px;
   text-align: center;
-  box-shadow: 0 2px 10px rgba(#28a745, 0.4);
+}
+
+.예시-박스 {
+  background-color: #e7f3ff;
+  border: 20px solid #007bff;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px 0;
+  text-align: center;
 }
 
 .breakpoint-table {
   width: 100%;
   margin: 20px 0;
+  /*
+  style 태그에 직접적으로 border 선을 주지 않을 때는
+  border-collapse: collapse; 를 사용한다.
+  테두리 분리 여부 무너짐
+
+  */
+  border-collapse: collapse;
 }
 
 /*
@@ -83,7 +119,7 @@ body {
   .container {
     padding: 15px;
     margin: 5px;
-    box-shadow: 0 2px 10px rgba(#6f42c1, 0.4);
+    box-shadow: 0 2px 10px rgba(255, 0, 255, 0.4);
   }
   h1 {
     font-size: 20px;
@@ -93,6 +129,9 @@ body {
   }
   .반응형-박스 {
     background-color: #6f42c1;
+  }
+  .반응형-박스::after {
+    content: "(모바일 화면)";
   }
 }
 
@@ -105,6 +144,12 @@ body {
   }
   .반응형-박스 {
     background-color: #dc3545;
+  }
+  .반응형-박스::after {
+    content: "(태블릿/모바일 화면)";
+  }
+  .breakpoint-table {
+    font-size: 14px;
   }
 }
 
