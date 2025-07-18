@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>🍽️ 맛집 리스트</title>
+    <title>🍽️ 맛집리스트</title>
     <link rel="stylesheet" href="../css/14_맛집가이드_기본반응형.css" />
   </head>
   <body>
@@ -12,11 +12,13 @@
       <p>전국 최고의 맛집을 한 곳에서 만나 보세요.</p>
 
       <div class="nav">
-        <a href="#">홈</a>
-        <a href="#">한식</a>
-        <a href="#">양식</a>
-        <a href="#">일식</a>
-        <a href="#">중식</a>
+        <a href="14_맛집가이드_기본반응형.html" class="move-link">홈</a>
+        <a href="#한식">한식</a>
+        <a href="#양식">양식</a>
+        <a href="#일식">일식</a>
+        <a href="#중식">중식</a>
+        <a href="#디저트">디저트</a>
+        <a href="15_맛집가이드_회원가입.html" class="move-link">회원가입</a>
       </div>
 
       <div class="alert">
@@ -26,9 +28,29 @@
 
       <h2>인기 메뉴</h2>
       <div class="grid">
-        <div class="item">
+        <div class="item" id="한식">
+          <h3>김치찌개</h3>
+          <p>직접 담근 김치로 끓인 김치찌개</p>
+        </div>
+        <div class="item" id="양식">
           <h3>마르게리타 피자</h3>
           <p>신선한 토마토와 모짜렐라 치즈, 바질이 어우러진 클래식 피자</p>
+        </div>
+        <div class="item" id="양식">
+          <h3>치즈버거 세트</h3>
+          <p>수제 패티와 신선한 야채, 눅눅한 감자튀김까지!</p>
+        </div>
+        <div class="item" id="일식">
+          <h3>연어초밥</h3>
+          <p>연어 초밥 8피스와 뜨끈한 미소국의 조합</p>
+        </div>
+        <div class="item" id="중식">
+          <h3>짜장면</h3>
+          <p>요즘 찾아보기 힘든 옛날 짜장면</p>
+        </div>
+        <div class="item" id="디저트">
+          <h3>치즈케이크</h3>
+          <p>크림치즈로 만든 진한 맛의 뉴욕 치즈 케이크</p>
         </div>
       </div>
     </div>

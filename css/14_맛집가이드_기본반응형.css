@@ -1,10 +1,12 @@
+/***** 공통 CSS *****/
+
 body {
   margin: 20xp 0 0 0;
   background-color: #f9f9f9;
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 30px;
   background-color: white;
@@ -49,6 +51,8 @@ p {
   background-color: #ff5252;
 }
 
+/***** 메인 페이지 CSS *****/
+
 .alert {
   background-color: #fff3cd;
   padding: 20px;
@@ -75,4 +79,131 @@ p {
 }
 
 .item {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  display: grid;
+}
+
+.item:hover {
+  border-color: #999;
+  background-color: #dde;
+}
+
+.nav .move-link {
+  background-color: #28a745;
+}
+
+.nav .move-link:hover {
+  background-color: #218838;
+}
+
+.item h3 {
+  color: #333;
+  /*
+  rem = 화면 너비의 글꼴의 상대적인 크기
+        기본 값이 16px이지만 설정에서 기본 글자 크기를 20px로 바꾸면 1rem은 20px를 기본으로 사용 가능
+  px  = 절대적인 크기
+  */
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.item p {
+  text-align: left;
+  color: #666;
+  margin: 0;
+}
+
+/***** 회원가입 CSS *****/
+
+.sign-container {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.sign-container label {
+  display: block;
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: bold;
+}
+
+.sign-container input,
+.sign-container select,
+.sign-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.sign-container input:focus,
+.sign-container select:focus,
+.sign-container textarea:focus {
+  border-color: #ffb6b6;
+}
+
+.sign-container textarea {
+  height: 80px;
+  resize: none;
+}
+
+.sign-container button {
+padding: 12px 30px;
+margin: 0 10px;
+border: none;
+border-radius: 5px;
+font-weight: bold;
+cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  .nav {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .nav a {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 460px) {
+  body {
+    padding: 10px;
+  }
+  .container {
+    padding: 15px;
+    margin: 5px;
+  }
+  h1 {
+    font-size: 29px;
+  }
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav a {
+    width: 80%;
+    text-align: center;
+  }
+  .alert {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
 }
