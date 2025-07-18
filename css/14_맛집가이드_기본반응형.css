@@ -130,9 +130,16 @@ p {
   font-weight: bold;
 }
 
-.sign-container input,
-.sign-container select,
-.sign-container textarea {
+.sign-container label span {
+  margin-bottom: 12px;
+  color: red;
+  font-weight: bold;
+  margin-left: 2px;
+}
+
+.sign-container > label > input,
+.sign-container > label > select,
+.sign-container > label > textarea {
   width: 100%;
   padding: 10px;
   border: 2px solid #ddd;
@@ -140,9 +147,9 @@ p {
   margin-top: 5px;
 }
 
-.sign-container input:focus,
-.sign-container select:focus,
-.sign-container textarea:focus {
+.sign-container > label > input:focus,
+.sign-container > label > select:focus,
+.sign-container > label > textarea:focus {
   border-color: #ffb6b6;
 }
 
@@ -151,13 +158,35 @@ p {
   resize: none;
 }
 
+.checkbox-group {
+  margin-top: 10px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.checkbox-group input {
+  margin-right: 8px
+}
+
 .sign-container button {
-padding: 12px 30px;
-margin: 0 10px;
-border: none;
-border-radius: 5px;
-font-weight: bold;
-cursor: pointer;
+  padding: 12px 30px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-group {
+  text-align: center;
+  margin-top: 20px;
 }
 
 @media (max-width: 768px) {
@@ -205,5 +234,50 @@ cursor: pointer;
   .alert {
     padding: 15px;
     font-size: 0.9rem;
+  }
+}
+
+/* 회원가입 버튼 */
+.sign-container button:first-child {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.sign-container button:first-child:hover {
+  background-color: #ff5252;
+}
+
+/* 초기화 버튼 */
+.sign-container button:last-child {
+  background-color: #6c757d;
+  color: white;
+}
+
+.sign-container button:last-child:hover {
+  background-color: #5a6268;
+}
+
+@media (max-width: 768px) {
+  .sign-container {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+
+  .btn-group button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 460px) {
+  .sign-container input,
+  .sign-container select,
+  .sign-container textarea {
+    font-size: 16px; /* iOS 줌 방지 */
+  }
+
+  .sign-container button {
+    padding: 15px;
   }
 }
