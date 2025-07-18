@@ -99,7 +99,8 @@ body {
 .breakpoint-table class td 태그에 동시에 적용할 때는
 쉼표(,)를 사용한다.
 */
-.breakpoint-table th, .breakpoint-table td {
+.breakpoint-table th,
+.breakpoint-table td {
   border: 1px solid #dee2e6; /* 속성 이름 : 내부에 작성 */
   padding: 12px;
   text-align: left;
@@ -155,4 +156,10 @@ body {
 
 .breakpoint-table {
   display: block;
+}
+
+@media (min-width: 769px) {
+  .반응형-박스::after {
+    content: "(데스크탑 화면)";
+  }
 }
