@@ -6151,6 +6151,7 @@ fieldset:disabled .btn {
     transition: var(--bs-offcanvas-transition);
   }
 }
+
 @media (max-width: 575.98px) and (prefers-reduced-motion: reduce) {
   .offcanvas-sm {
     transition: none;
