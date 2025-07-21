@@ -12,18 +12,20 @@
       <h1>🍕 맛집 리스트 - 마르게리타</h1>
       <p>이탈리아 정통의 맛을 그대로 재현한 클래식 피자</p>
 
+      <button class="hamburger">&#9776;</button>
       <div class="nav">
         <a href="14_맛집가이드_기본반응형.html" class="move-link">홈</a>
-        <a href="#menu-info">메뉴 정보</a>
-        <a href="#ingredients">재료</a>
-        <a href="#order">주문하기</a>
-        <a href="#restaurant">매장 정보</a>
+        <a href="#한식">한식</a>
+        <a href="#양식">양식</a>
+        <a href="#일식">일식</a>
+        <a href="#중식">중식</a>
+        <a href="#디저트">디저트</a>
         <a href="15_맛집가이드_회원가입.html" class="move-link">회원가입</a>
       </div>
 
       <div class="menu-detail">
         <!-- 메뉴 이미지 추가 -->
-        <div class="menu-img">
+        <div class="menu-img" id="menu-info">
           <h3>마르게리타 피자</h3>
           <p>
             1889년 이탈리아 나폴리에서 처음 만들어진 마르게리타 피자는 피자의
@@ -34,14 +36,14 @@
             <p>⭐⭐⭐⭐⭐</p>
             <span>(4.8/5.0)</span>
           </div>
-          <div class="재료리스트">
+          <div class="재료리스트" id="ingredients">
             <span class="재료아이템">토마토 소스</span>
             <span class="재료아이템">모짜렐라 치즈</span>
             <span class="재료아이템">신선한 바질</span>
             <span class="재료아이템">올리브 오일</span>
             <span class="재료아이템">숙성 도우</span>
           </div>
-          <div class="order-list">
+          <div class="order-list" id="order">
             <div class="order-item">
               <strong>스몰</strong>
               <strong>25cm</strong>
@@ -58,8 +60,20 @@
               <p>￦21,000</p>
             </div>
           </div>
+          <a href="#menu-info">메뉴 정보</a>
+          <a href="#ingredients">재료</a>
+          <a href="#order">주문하기</a>
+          <a href="#restaurant">매장 정보</a>
         </div>
       </div>
     </div>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const nav = document.querySelector(".nav");
+
+      hamburger.addEventListener("click", () => {
+        nav.classList.toggle("show");
+      });
+    </script>
   </body>
 </html>

@@ -1,3 +1,10 @@
+/*
+나의 코드가 문제가 생겼을 경우나 상대방과 코드의 차이점,
+업데이트 이후 개선한 코드에 대해서
+확인하길 원한다면 비교하고자 하는 파일 두 가지를 선택하여 비교 가능
+파일 두 가지를 선택 후 선택항목비교를 진행
+*/
+
 /***** 공통 CSS *****/
 
 body {
@@ -35,21 +42,6 @@ a {
   text-decoration: none;
   color: #333;
   font-size: 18px;
-}
-
-.hamburger {
-  display: none;
-  /*
-    display: none;  평소에는 숨기기
-    display: block; -> 460 때 설정
-    */
-  border: none;
-  font-size: 30px;
-  cursor: pointer;
-  border-radius: 10px;
-  padding: auto;
-  margin: 0 auto;
-  margin-bottom: 10px;
 }
 
 .nav {
@@ -268,11 +260,10 @@ input select textarea 태그에
   background-color: #5a6268;
 }
 
-/* ----- 맛집가이드 각 메뉴 상세 페이지 스타일 ----- */
-
+/***** 맛집가이드 각 메뉴 상세 페이지 스타일 *****/
 .menu-detail {
-  max-width: 800px; /* 0~800px 가로 너비 제한 */
-  margin: 0 auto; /* 상하 0, 좌우 자동 여백 */
+  max-width: 800px; /* 0 부터 800 px 가로 너비 제한*/
+  margin: 0 auto; /* 상하 0 좌우 자동 여백 주기  */
   padding: 20px;
 }
 
@@ -283,10 +274,9 @@ input select textarea 태그에
   border: 2px solid #ffcc02;
   margin-bottom: 30px;
 }
-
 .menu-detail .menu-img h3 {
   color: #d54315;
-  font-size: 2rem;
+  font-size: 2rem; /* 기본 글자 크기가 16px 라면 1 rem 16px이고, 2rem 은 32px 다. */
   text-align: center;
   margin-bottom: 15px;
 }
@@ -304,7 +294,6 @@ input select textarea 태그에
   font-size: 30px;
   color: #d32f3f;
 }
-
 .price p {
   font-size: 18px;
 }
@@ -314,53 +303,30 @@ input select textarea 태그에
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
-  margin-bottom: 30px;
 }
-
 .재료아이템 {
   background-color: #4caf50;
   color: white;
-  padding: 10px 20px;
+  padding: 8px 16px;
   border-radius: 20px;
-  text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .order-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin: 25px;
-  gap: 20px;
 }
-
 .order-item {
   background-color: white;
   padding: 20px;
-  text-align: center;
   border: 2px solid #ddd;
   border-radius: 10px;
+  text-align: center;
 }
 
 .order-item:hover {
   border-color: #ff6b6b;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.order-item:active {
-  border: 3px solid #ff0b6b;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.order-item strong {
-  display: block;
-  font-size: 1rem;
-  color: #333;
-  margin-bottom: 8px;
-}
-
-.order-item p {
-  color: #ff6b6b;
-  font-size: 1.5rem;
 }
 
 /* 태블릿 반응형 768 px*/
@@ -416,11 +382,7 @@ input select textarea 태그에
   }
 
   h1 {
-    font-size: 20px;
-  }
-
-  .hamburger {
-    display: block;
+    font-size: 29px;
   }
 
   .nav {
@@ -429,7 +391,6 @@ input select textarea 태그에
   }
 
   .nav a {
-    /* 네비게이션을 모바일에서 확인할 때 토글 형태(햄버거)로 확인할 수 있도록 한다 */
     width: 80%;
     text-align: center;
   }
@@ -449,16 +410,10 @@ input select textarea 태그에
   }
 }
 
-.재료리스트 {
-  gap: 8px;
-}
-
-.재료아이템 {
-  padding: 6px 12px;
-  font-size: 10px;
-}
-
 /*
+
+
+
 클래스 nav 내부에 있는 a 태그 위 마우스 올라오면
 배경색 ff5252 변경
 */
