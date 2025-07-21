@@ -16,10 +16,12 @@
 
       clear : float로 인해 띄워져 있는 상태를 해제하는 속성
               (요소 겹침 문제 해결)
+
+      float을 작성할 경우 display:block; 자동 설정 되기 때문에 float을 작성할 경우에는 display 생략 가능
     </pre>
 
     <hr />
-    
+
     <h3>float: left / clear: left</h3>
     <div class="test">
       <div class="float-left">1</div>
@@ -33,8 +35,6 @@
       <div class="float-left">7</div>
     </div>
 
-
-    </style>
     <h3>float: right / clear: right</h3>
     <div class="test">
       <div class="float-right">1</div>
@@ -47,7 +47,6 @@
       <div class="clear-right">안녕하세영</div>
       <div class="float-right">7</div>
     </div>
-
 
     <h3>float: left + right / clear: both</h3>
     <div class="test">
