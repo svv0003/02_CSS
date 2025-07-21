@@ -31,6 +31,33 @@ p {
   margin-bottom: 30px;
 }
 
+a {
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  
+}
+
+/*
+.grid div a {
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: none;
+  color: orangered;
+  font-size: 18px;
+}
+
+.grid div a:hover {
+  color: red;
+}
+
+.grid div a:active {
+  color: red;
+  font-weight: bold;
+}
+*/
+
 .nav {
   display: flex;
   justify-content: center;
@@ -116,6 +143,39 @@ p {
   margin: 0;
 }
 
+.item a {
+  /*
+  a 태그는 inline 요소이기 때문에 text-align 적용 힘듬
+  inline-block -> a 태그를 블록 요소처럼 만들어서 패딩, 마진 등이 제대로 적용되도록 함
+  float : right -> 요소를 오른쪽으로 띄움
+          -> inline이 아니라 block 요소 처리 됨
+         
+  display: inline-block;
+  float: right;
+  -> 위의 경우에는 inline-block이 무시되고, block 형태로 변경되면서 태그 내부에 있는 요소 값이 오른쪽으로 정렬됨
+
+  display: block;
+  float: right;
+  -> float 속성 내부에는 display: block; 자동으로 포함되어 있으므로 생략 가능
+
+  float: right;
+  -> float 속성에 display: block; 포함되어 있으므로 display 없이 사용 가능
+  */
+  display: inline-block;
+  float: right;
+  background-color: darkorange;
+  padding: 8px 16px;
+  border-radius: 15px;
+}
+
+.item a:hover {
+  background-color: orangered;
+}
+
+.item a:active {
+  background-color: red;
+}
+
 /***** 회원가입 CSS *****/
 
 .sign-container {
@@ -172,7 +232,7 @@ p {
 }
 
 .checkbox-group input {
-  margin-right: 8px
+  margin-right: 8px;
 }
 
 .sign-container button {
