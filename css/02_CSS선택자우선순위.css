@@ -1,0 +1,29 @@
+/*
+id="아이디명칭" -> #아이디명칭 {}
+class="속성명" -> .속성명 {}
+<태그명>       -> 태그명 {}
+*/
+
+
+/* 2순위 -> html 태그 내부에 직접 style 작성 */
+
+/* 3순위 아이디 선택자 */
+#test1 {
+  width: 300px;
+  height: 100px;
+  background-color: aqua;
+}
+
+/* 4순위 클래스 선택자 */
+.cls1 {
+  background-color: green;
+}
+
+/* 5순위 태그 선택자 */
+div {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  /* 1순위 css !important */
+  background-color: orangered !important;
+}
