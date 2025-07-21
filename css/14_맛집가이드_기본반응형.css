@@ -11,6 +11,7 @@ body {
   background-color: white;
   padding: 30px;
   border-radius: 10px;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
 }
 
 h1 {
@@ -176,6 +177,24 @@ a {
 a 태그 위에 마우스를 올리면   : hover
 a 태그를    마우스로 클릭하면 : active
 */
+
+#menu-info {
+  align-items: center;
+}
+
+div #menu-info .menu-image {
+  font-size: 50px;
+  text-align: center;
+}
+
+.order-button {
+  text-align: center;
+}
+
+.order-button button {
+  font-size: 20px;
+  border-radius: 10px;
+}
 
 /***** 회원가입 CSS *****/
 .sign-container {
@@ -354,7 +373,16 @@ input select textarea 태그에
 .order-item strong {
   display: block;
   font-size: 1rem;
+  font-weight: bold;
   color: #333;
+  margin-bottom: 8px;
+}
+
+.order-item > :nth-child(2) {
+  display: block;
+  font-size: 0.6rem;
+  color: #333;
+  margin-top: 16px;
   margin-bottom: 8px;
 }
 
@@ -428,7 +456,7 @@ input select textarea 태그에
     align-items: center;
     display: none;
   }
-  
+
   .nav.show {
     display: flex;
     flex-direction: column;
@@ -452,6 +480,14 @@ input select textarea 태그에
 
   .sign-container button {
     padding: 15px;
+  }
+
+  .order-list {
+    display: block;
+  }
+
+  .order-item {
+    margin-bottom: 20px;
   }
 }
 

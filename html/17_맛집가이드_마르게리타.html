@@ -15,21 +15,20 @@
       <button class="hamburger">&#9776;</button>
       <div class="nav">
         <a href="14_맛집가이드_기본반응형.html" class="move-link">홈</a>
-        <a href="#한식">한식</a>
-        <a href="#양식">양식</a>
-        <a href="#일식">일식</a>
-        <a href="#중식">중식</a>
-        <a href="#디저트">디저트</a>
+        <a href="#menu-info">메뉴 정보</a>
+        <a href="#ingredients">재료</a>
+        <a href="#order">주문하기</a>
+        <a href="#restaurant">매장 정보</a>
         <a href="15_맛집가이드_회원가입.html" class="move-link">회원가입</a>
       </div>
 
       <div class="menu-detail">
-        <!-- 메뉴 이미지 추가 -->
         <div class="menu-img" id="menu-info">
+          <div class="menu-image">🍕</div>
           <h3>마르게리타 피자</h3>
           <p>
             1889년 이탈리아 나폴리에서 처음 만들어진 마르게리타 피자는 피자의
-            원조이다.🍕🏪🛒
+            원조이다.
           </p>
           <div class="price">
             <h5>￦18,000</h5>
@@ -60,17 +59,16 @@
               <p>￦21,000</p>
             </div>
           </div>
-          <a href="#menu-info">메뉴 정보</a>
-          <a href="#ingredients">재료</a>
-          <a href="#order">주문하기</a>
-          <a href="#restaurant">매장 정보</a>
+          <div class="order-button">
+            <button type="submit">주문하기</button>
+          </div>
         </div>
       </div>
     </div>
     <script>
       /*
       html에서 맨 위에 <!DOCTYPE html> 존재함
-      
+
       document
       */
       const hamburger = document.querySelector(".hamburger");
