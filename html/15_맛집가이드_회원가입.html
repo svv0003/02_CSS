@@ -13,6 +13,7 @@
       <p>전국 최고의 맛집을 한 곳에서 만나 보세요.</p>
       <!--
       container와 form 사이에 14_맛집가이드_기본반응형에서 nav 클래스를 가져와서 넣으시오 -->
+      <button class="hamburger">&#9776;</button>
       <div class="nav">
         <a href="14_맛집가이드_기본반응형.html" class="move-link">홈</a>
         <a href="#한식">한식</a>
@@ -89,20 +90,12 @@ type 표시를 위해 작성해주는 것이 좋다
             <p><strong>이용약관 동의</strong></p>
 
             <label>
-              <input
-                type="checkbox"
-                name="agree1"
-                required
-              />
+              <input type="checkbox" name="agree1" required />
               [필수] 서비스 이용약관에 동의합니다.
             </label>
 
             <label>
-              <input
-                type="checkbox"
-                name="agree2"
-                required
-              />
+              <input type="checkbox" name="agree2" required />
               [필수] 개인정보 처리방침에 동의합니다.
             </label>
 
@@ -118,5 +111,18 @@ type 표시를 위해 작성해주는 것이 좋다
         </div>
       </form>
     </div>
+    <script>
+      /*
+      html에서 맨 위에 <!DOCTYPE html> 존재함
+      
+      document
+      */
+      const hamburger = document.querySelector(".hamburger");
+      const nav = document.querySelector(".nav");
+
+      hamburger.addEventListener("click", () => {
+        nav.classList.toggle("show");
+      });
+    </script>
   </body>
 </html>
