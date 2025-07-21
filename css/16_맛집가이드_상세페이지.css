@@ -1,0 +1,26 @@
+.store-list{
+  
+}
+
+.store-item {
+  /* background: linear-gradient(45deg, #667eea 0%, #e23939 100%); */
+  background: linear-gradient(90deg, #fff3e0, #fce4ec);
+  border: 1px solid #e1e8ff;
+  border-radius: 12px;
+  padding: 5px 15px;
+  padding-bottom: 25px;
+  margin-bottom: 20px;
+
+}
+
+.store-list h3{
+  font-size: 1.8rem;
+  /*
+  영어  # f~a  6개
+  숫자  # 0~9 10개
+  */
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #667eea;
+}
