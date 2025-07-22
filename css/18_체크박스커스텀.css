@@ -1,0 +1,113 @@
+.custom {
+  cursor: pointer;
+  /*
+  <label class="custom">
+    <input type="checkbox" checked>
+    <span class="checkbox-icon"></span>
+    <span>초록배경 + 파란색 체크박스</span>
+  </label>
+  
+  display: inline-flex;
+  -> inline 내에서 나란히 배치하도록 설정
+     flex  class="custom" label 태그 내부에 존재하는
+     input 태그와 span 태그를 나란히 배치 
+
+  position: relative;
+  -> label 태그 내부에서 기준점(중심지 역할)이 됨
+
+  .custom input:checked + .checkbox-icon::after{
+  -> .custom 클래스가 작성된 input이 :checked(체크된) 상태일 때
+     그 바로 다음 뒤에 오는 .checked-icon의 가상 요소를 선택
+
+    content: "";
+    border: solid #3196f3;      -> 실선 태두리
+    border-width: 0 3px 3px 0;  -> 상우하좌 테두리 설정 (상+좌 / 우+하 테두리만 남긴다)
+    position: absolute;
+    left: 8px;
+    top: 4px;
+    width: 6px;
+    height: 12px;
+    transform: rotate(45deg);   -> 시계 방향으로 45도 회전
+  }
+  */
+  display: inline-flex;
+}
+
+.custom input {
+  display: none;
+}
+
+.custom .checkbox-icon {
+  width: 24px;
+  height: 24px;
+  background-color: #4caf50;
+  border-radius: 4px;
+  position: relative;
+}
+
+/*
+체크 마크 만들기
+input 태그가 체크되었을 때 체크박스 아이콘은 어떻게 되는지?
+*/
+.custom input:checked + .checkbox-icon::after {
+  content: "";
+  border: solid #3196f3;
+  border-width: 0 3px 3px 0;
+  position: absolute;
+  left: 8px;
+  top: 4px;
+  width: 6px;
+  height: 12px;
+  transform: rotate(45deg);
+}
+
+.custom2 {
+  cursor: pointer;
+  display: inline-flex;
+}
+
+.custom2 input {
+  display: none;
+}
+
+.custom2 i {
+  width: 24px;
+  height: 24px;
+  background-color: lightblue;
+  color: white !important;
+  border-radius: 4px;
+  display: flex;            /* 기본 정렬 */
+  align-items: center;      /* 세로에서 가운데 */
+  justify-content: center;  /* 가로에서 가운데*/
+}
+
+.custom2 input:checked + i {
+  background-color: #aaa;
+  color: white;
+}
+
+.custom3 {
+  cursor: pointer;
+  display: inline-flex;
+}
+
+.custom3 input {
+  display: none;
+}
+
+.custom3 i {
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border: 2px solid orange;
+  color: orange;
+  border-radius: 4px;
+  display: flex;            /* 기본 정렬 */
+  align-items: center;      /* 세로에서 가운데 */
+  justify-content: center;  /* 가로에서 가운데*/
+}
+
+.custom3 input:checked + i {
+  background-color: lightblue;
+  color: blue;
+}

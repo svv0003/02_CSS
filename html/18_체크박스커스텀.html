@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>체크박스 커스텀하기</title>
+    <link rel="stylesheet" href="../css/18_체크박스커스텀.css" />
+    <script
+      src="https://kit.fontawesome.com/2b1cc8e2c0.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      /*
+      link 태그로 css 확장자 파일을 가져오는 것과 동일 순위
+      style 태그로 html 내부에 스타일을 작성하는 것은 css 순위에 크게 영향 미치지 않음
+      */
+    </style>
+  </head>
+  <body>
+    <h1>체크박스 커스텀하기</h1>
+    <label class="custom">
+      <input type="checkbox" checked />
+      <span class="checkbox-icon"></span>
+      <span>초록배경 + 파란색 체크박스</span>
+    </label>
+
+    <label class="custom2">
+      <input type="checkbox" checked />
+      <i class="fa-solid fa-check" style="color: #e63b7a"></i>
+      <span>폰트 어썸에서 가져온 체크박스</span>
+    </label>
+
+    <label class="custom3">
+      <input type="checkbox" checked />
+      <i class="fa-solid fa-check-double"></i>
+    </label>
+  </body>
+</html>

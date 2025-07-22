@@ -87,19 +87,21 @@ fieldset 클래스 명칭이 choice-field인 태그들 디자인 속성 적용
   /*
   accent-color : 체크된 체크 박스 내부 색상을 변경
   체크된 체크 표시 색상을 변경
+  fontasome이나 외부에서 작성한 svg 폰트, icon을 사용해서 변경 가능
   */
   accent-color: #ff6b6b;
 }
 
-.favorite > label > input:checked {
+.favorite > label > input:checked + .favorite > label > input::after {
   /*
   accent-color : 체크된 체크 박스 내부 색상을 변경
   체크된 체크 표시 색상을 변경
   
+  filter: invert(1);
   invert() : 기존에 input에서 주었던 accent 색상이나 이외 모든 색상을 반전 형태로 제공
   보통 light 모드 테마 -> dark 모드 테마로 변경하거나 색약용 테마로 변경할 때 주로 사용
   */
-  filter: invert(1);
+  content: ㅎ;
 }
 
 img {
