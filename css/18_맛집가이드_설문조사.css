@@ -1,0 +1,27 @@
+.userInfo label {
+  display: flex;
+}
+
+fieldset {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 20px;
+}
+
+img {
+  width: 200px;
+  margin: 10px;
+  border: 1px solid black;
+}
+
+iframe {
+  margin: 10px;
+  border: 1px solid black;
+}
+
+.button button {
+  justify-items: flex-end;
+}

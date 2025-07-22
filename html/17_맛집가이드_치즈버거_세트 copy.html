@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🍔 치즈버거 세트 - 맛집 가이드</title>
+    <link rel="stylesheet" href="../css/14_맛집가이드_기본반응형.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🍔 맛집 리스트 - 치즈버거 세트</h1>
+      <p>수제 패티와 신선한 야채가 만나는 완벽한 조화</p>
+
+      <!-- 1단계: 네비게이션 추가 -->
+      <button class="hamburger" onclick="toggleNav()">☰</button>
+      <div class="nav" id="navbar">
+        <a href="14_맛집가이드_기본반응형.html" class="move-link">홈으로</a>
+        <a href="#menu-info">메뉴 정보</a>
+        <a href="#ingredients">재료</a>
+        <a href="#order">주문하기</a>
+        <a href="#restaurant">매장 정보</a>
+        <a href="15_맛집가이드_회원가입.html" class="move-link">회원가입</a>
+      </div>
+
+      <div class="menu-detail">
+        <!-- 2단계: 메뉴 상세 정보 구성 -->
+        <div class="menu-img" id="menu-info">
+          <h3>치즈버거 세트</h3>
+          <p>
+            미국 전통의 클래식 치즈버거와 바삭한 감자튀김, 시원한 콜라까지
+            포함된 완벽한 세트메뉴입니다.
+          </p>
+        </div>
+
+        <!-- 메뉴 이미지 영역 -->
+        <div class="menu-image">🍔</div>
+
+        <!-- 가격/평점 정보 -->
+        <div class="price-info">
+          <div class="price">₩15,000</div>
+          <div class="rating">
+            <div class="stars">⭐⭐⭐⭐☆</div>
+            <span>(4.5/5.0)</span>
+          </div>
+        </div>
+
+        <!-- 메뉴 설명 -->
+        <div class="alert">
+          <h3>메뉴 설명</h3>
+          <p style="text-align: left">
+            100% 소고기로 만든 육즙 가득한 수제 패티에 진한 체다 치즈가
+            녹아내리는 프리미엄 치즈버거입니다. 신선한 양상추와 토마토, 아삭한
+            피클과 양파가 특제 소스와 어우러져 완벽한 맛의 조화를 이룹니다.
+            부드러운 브리오슈 번에 담아 더욱 특별한 맛을 선사합니다.
+          </p>
+        </div>
+
+        <!-- 3단계: 재료 정보 섹션 -->
+        <h3 id="ingredients" style="text-align: center; margin-top: 40px">
+          재료 정보
+        </h3>
+        <div class="ingredient-list">
+          <span class="ingredient-tag">수제 패티</span>
+          <span class="ingredient-tag">체다 치즈</span>
+          <span class="ingredient-tag">양상추</span>
+          <span class="ingredient-tag">토마토</span>
+          <span class="ingredient-tag">양파</span>
+          <span class="ingredient-tag">피클</span>
+          <span class="ingredient-tag">특제 소스</span>
+          <span class="ingredient-tag">브리오슈 번</span>
+          <span class="ingredient-tag">감자튀김</span>
+          <span class="ingredient-tag">콜라</span>
+        </div>
+
+        <!-- 4단계: 주문 옵션 구성 -->
+        <div class="order-options" id="order">
+          <h3>세트 구성 선택</h3>
+          <form id="orderForm">
+            <label class="option-item">
+              <input type="radio" name="set" value="basic" checked />
+              <strong>기본 세트</strong> - 버거 + 감자튀김 + 콜라
+              <span style="float: right; color: #ff6b6b; font-weight: bold"
+                >₩15,000</span
+              >
+            </label>
+            <label class="option-item">
+              <input type="radio" name="set" value="deluxe" />
+              <strong>디럭스 세트</strong> - 버거 + 감자튀김 + 어니언링 + 콜라
+              <span style="float: right; color: #ff6b6b; font-weight: bold"
+                >₩18,000</span
+              >
+            </label>
+            <label class="option-item">
+              <input type="radio" name="set" value="large" />
+              <strong>라지 세트</strong> - 더블패티 + 감자튀김 + 콜라
+              <span style="float: right; color: #ff6b6b; font-weight: bold"
+                >₩20,000</span
+              >
+            </label>
+          </form>
+          <button class="order-button" onclick="handleOrder()">주문하기</button>
+        </div>
+
+        <!-- 5단계: 매장 정보 추가 -->
+        <div class="restaurant-info" id="restaurant">
+          <h3>매장 정보</h3>
+          <p><strong>매장명:</strong> 버거킹덤 강남점</p>
+          <p><strong>주소:</strong> 서울시 강남구 버거로 456</p>
+          <p><strong>전화번호:</strong> 02-5678-9012</p>
+          <p><strong>영업시간:</strong> 10:00 - 23:00 (연중무휴)</p>
+          <p><strong>배달 시간:</strong> 25-35분</p>
+          <p><strong>최소 주문 금액:</strong> 12,000원</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // 네비게이션 토글 기능
+      function toggleNav() {
+        const navbar = document.getElementById("navbar");
+        navbar.classList.toggle("show");
+      }
+
+      // 주문 처리 기능
+      function handleOrder() {
+        const selectedSet = document.querySelector(
+          'input[name="set"]:checked'
+        ).value;
+        let setName = "";
+        let price = "";
+
+        switch (selectedSet) {
+          case "basic":
+            setName = "기본 세트";
+            price = "15,000원";
+            break;
+          case "deluxe":
+            setName = "디럭스 세트";
+            price = "18,000원";
+            break;
+          case "large":
+            setName = "라지 세트";
+            price = "20,000원";
+            break;
+        }
+
+        alert(
+          `🍔 ${setName}를 주문하셨습니다!\n가격: ${price}\n\n주문이 접수되었습니다. 25-35분 내에 배달됩니다.`
+        );
+      }
+    </script>
+  </body>
+</html>
