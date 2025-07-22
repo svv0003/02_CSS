@@ -74,16 +74,16 @@ input 태그가 체크되었을 때 체크박스 아이콘은 어떻게 되는�
   width: 24px;
   height: 24px;
   background-color: lightblue;
-  color: white !important;
+  color: white;
   border-radius: 4px;
-  display: flex;            /* 기본 정렬 */
-  align-items: center;      /* 세로에서 가운데 */
-  justify-content: center;  /* 가로에서 가운데*/
+  display: flex; /* 기본 정렬 */
+  align-items: center; /* 세로에서 가운데 */
+  justify-content: center; /* 가로에서 가운데*/
 }
 
 .custom2 input:checked + i {
   background-color: #aaa;
-  color: white;
+  color: #e63b7a;
 }
 
 .custom3 {
@@ -102,12 +102,13 @@ input 태그가 체크되었을 때 체크박스 아이콘은 어떻게 되는�
   border: 2px solid orange;
   color: orange;
   border-radius: 4px;
-  display: flex;            /* 기본 정렬 */
-  align-items: center;      /* 세로에서 가운데 */
-  justify-content: center;  /* 가로에서 가운데*/
+  display: flex; /* 기본 정렬 */
+  align-items: center; /* 세로에서 가운데 */
+  justify-content: center; /* 가로에서 가운데*/
 }
 
 .custom3 input:checked + i {
   background-color: lightblue;
   color: blue;
 }
+
